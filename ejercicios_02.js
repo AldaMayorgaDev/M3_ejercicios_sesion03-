@@ -111,48 +111,72 @@ convertidoraTemperatura(gCelsius);
  * (solicita los parámetros que consideres necesarios por consola).
  */
 
-let palabra = prompt("Ingrese la palabra:");
+/**
+ * 5. Crea una función que con base en la palabra ingresada te diga cuantas vocales tiene en total
+ * y desgloce la cantidad por cada vocal de la misma
+ * (solicita los parámetros que consideres necesarios por consola).
+ */
 
-function numeroDeVocales(palabra) {
-  if (palabra.match(/[aeiouAEIOU]/gi)) {
-    let numeroVocales = palabra.match(/[aeiouAEIOU]/gi).length;
-    console.log("El numero de Vocales en total es: " + numeroVocales);
-    cantidadVocales(palabra);
-  } else {
-    console.log("La palabra no tiene vocales");
-  }
+ let palabra = prompt("Ingrese la palabra:");
 
-  
-  return cantidadVocales(palabra);
-}
-numeroDeVocales(palabra);
-
-function cantidadVocales(palabra) {
-    function contarA(palabra) {
-      let numeroA = palabra.match(/[aA]/gi).length;
-      console.log("El numero de A en total es: " + numeroA);
-    }
-    function contarE(palabra) {
-      let numeroE = palabra.match(/[eE]/gi).length;
-      console.log("El numero de E en total es: " + numeroE);
-    }
-    function contarI(palabra) {
-      let numeroI = palabra.match(/[iI]/gi).length;
-      console.log("El numero de I en total es: " + numeroI);
-    }
-    function contarO(palabra) {
-      let numeroO = palabra.match(/[oO]/gi).length;
-      console.log("El numero de O en total es: " + numeroO);
-    }
-    function contarU(palabra) {
-      let numeroU = palabra.match(/[uU]/gi).length;
-      console.log("El numero de U en total es: " + numeroU);
-    }
-    return (
-      contarA(palabra),
-      contarE(palabra),
-      contarI(palabra),
-      contarO(palabra),
-      contarU(palabra)
-    );
-  }
+ function numeroDeVocales(palabra) {
+   if (palabra.match(/[aeiouAEIOU]/gi)) {
+     let numeroVocales = palabra.match(/[aeiouAEIOU]/gi).length;
+     console.log("El número de Vocales en total es: " + numeroVocales);
+     cantidadVocales(palabra);
+   } else {
+     console.log("La palabra no tiene vocales");
+     cantidadVocales(palabra);
+   }
+ }
+ numeroDeVocales(palabra);
+ 
+ function cantidadVocales(palabra) {
+     function contarA(palabra) {
+       if ((palabra.includes(`a`)||palabra.includes(`A`))){
+       let numeroA = palabra.match(/[aA]/gi).length;
+       console.log("El número de A en total es: " + numeroA);
+       }else{
+         console.log("El número de A en total es: 0");
+       }
+     }
+   function contarE(palabra) {
+       if ((palabra.includes(`e`)||palabra.includes(`E`))){
+       let numeroE = palabra.match(/[eA]/gi).length;
+       console.log("El número de E en total es: " + numeroE);
+       }else{
+         console.log("El número de E en total es: 0");
+       }
+     }
+       function contarI(palabra) {
+       if ((palabra.includes(`i`)||palabra.includes(`I`))){
+       let numeroI = palabra.match(/[iI]/gi).length;
+       console.log("El número de I en total es: " + numeroI);
+       }else{
+         console.log("El número de I en total es: 0");
+       }
+     }
+       function contarO(palabra) {
+       if ((palabra.includes(`o`)||palabra.includes(`O`))){
+       let numeroO = palabra.match(/[oO]/gi).length;
+       console.log("El número de O en total es: " + numeroO);
+       }else{
+         console.log("El número de O en total es: 0");
+       }
+     }
+       function contarU(palabra) {
+       if ((palabra.includes(`u`)||palabra.includes(`U`))){
+       let numeroU = palabra.match(/[uU]/gi).length;
+       console.log("El número de U en total es: " + numeroU);
+       }else{
+         console.log("El número de U en total es: 0");
+       }
+     }
+     return (
+       contarA(palabra),
+       contarE(palabra),
+       contarI(palabra),
+       contarO(palabra),
+       contarU(palabra)
+     );
+   }
