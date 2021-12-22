@@ -105,11 +105,6 @@ function convertidoraTemperatura(gCelsius) {
 }
 convertidoraTemperatura(gCelsius);
 
-/**
- * 5. Crea una función que con base en la palabra ingresada te diga cuantas vocales tiene en total
- * y desgloce la cantidad por cada vocal de la misma
- * (solicita los parámetros que consideres necesarios por consola).
- */
 
 /**
  * 5. Crea una función que con base en la palabra ingresada te diga cuantas vocales tiene en total
